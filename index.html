@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./calculator.png">
+
+    
+</head>
+<body>
+    <main>
+        <!-- container -->
+        <div class="w-[100%] h-[100vh] bg-[#e3f9ff] flex items-center justify-center">
+            <!-- calculator  -->
+            <div class="bg-[#3a4452] p-[20px] rounded-[10px]">
+                <form>
+                    <div class="display flex justify-end my-[20px] mx-0">
+                        <input class="rounded-md text-right flex-1 shadow-none text-[25px] h-[5rem] font-bold border-none" type="text" name="display">
+                    </div>
+                    <div>
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="AC" onclick="display.value = '' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="DE" onclick="display.value = display.value.toString().slice(0, -1) ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="." onclick="display.value += '.' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="/" onclick="display.value += '/' ">
+                    </div>
+                    <div>
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" onclick="display.value += '7' " value="7">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="8" onclick="display.value += '8' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="9" onclick="display.value += '9' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="*" onclick="display.value += '*' ">
+                    </div>
+                    <div>
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="4" onclick="display.value += '4' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="5" onclick="display.value += '5' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="6" onclick="display.value += '6' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="-" onclick="display.value += '-' ">
+                    </div>
+                    <div>
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="1" onclick="display.value += '1' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="2" onclick="display.value += '2' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="3" onclick="display.value += '3' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="+" onclick="display.value += '+' ">
+                    </div>
+                    <div>
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="00" onclick="display.value += '00' ">
+                        <input class="border-none outline-none w-[60px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-white shadow-yellow-50 font-semibold" type="button" value="0" onclick="display.value += '0' ">
+                        <input class="border-none outline-none w-[145px] h-[60px] rounded-[10px] shadow-md bg-transparent text-[20px] cursor-pointer m-[10px] text-[#33ffd8] shadow-yellow-50 font-semibold" type="button" value="=" onclick="display.value = eval(display.value)">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+            
+    </main>
+
+
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>
